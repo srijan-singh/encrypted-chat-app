@@ -1,0 +1,23 @@
+{% extends 'server.html' %}
+
+{% block content%}
+    <h1>{% block self.title %} Server Messages {% endblock%}</h1>
+    {% for message in messages %}
+        <div class='server_message'>
+            <h3>{{ message['title'] }}</h3>
+            <p>{{ message['content'] }}</p>
+        </div>
+    {% endfor %}
+{% endblock%}
+
+{% extends 'client.html' %}
+
+{% block content%}
+    <h1>{% block self.title %}Client Messages {% endblock%}</h1>
+    {% for message in messages %}
+        <div class='client_message'>
+            <h3>{{ message['title'] }}</h3>
+            <p>{{ message['content'] }}</p>
+        </div>
+    {% endfor %}
+{% endblock%}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Encryted Chat App
+        </title>
+    </head>
+    <body>
+        <center>   
+            <div id="banner" style="width:50%; height: 70px;  background: linear-gradient(to left, aqua, aquamarine, azure); border-radius: 20px;" >
+                
+                <div id="heading" style="padding-top: 7px; font-size: 40px; font-weight: 500;">
+                    Encryted Chat App
+                </div>
+            
+            </div>
+        </center>
+        <br>
+        <center>
+        <div style="width: 50%; height: 400px; background: linear-gradient(to top right, aquamarine, aqua, azure); border-radius: 20px;" id="client">
+            
+                <div id="heading" style="padding-top: 7px; font-size: 30px; font-weight: 500;">
+                    Client
+                </div>
+                <div id="display_client_message">
+                    {%block content %} {% endblock %}
+                </div>
+                <div id="client_message">
+                    <label>Message: </label>
+                    <input type="text" id="client"/>
+                    <button id="client_send" style="background-color: aquamarine; border-radius: 10px;">Send</button>
+                </div>
+            
+        </div>
+    </center>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Encryted Chat App
+        </title>
+    </head>
+    <body>
+        <center>   
+            <div id="banner" style="width:50%; height: 70px;  background: linear-gradient(to left, aqua, aquamarine, azure); border-radius: 20px;" >
+                
+                <div id="heading" style="padding-top: 7px; font-size: 40px; font-weight: 500;">
+                    Encryted Chat App
+                </div>
+            
+            </div>
+        </center>
+        <br>
+        <div style="width: 45%; height: 400px; float: left; background: linear-gradient(to bottom left, aqua, aquamarine, azure); border-radius: 20px; margin-left: 2.5%;" id="server">
+            <center>
+                <div id="heading" style="padding-top: 7px; font-size: 30px; font-weight: 500;">
+                    Server
+                </div>
+                <div id="display_server_message">
+                    {% block content %} {% endblock %}
+                </div>
+                <div id="server_message">
+                    <form action = "http://localhost:5000" method = "post">
+                        <label>Message: </label>
+                        <input type="text" id="server"/>
+                        <input type = "submit" value = "Send" id="server_send" style="background-color: aqua; border-radius: 10px;" />
+                    </form>                    
+                </div>
+            </center>
+        </div>
+
+        <div style="width: 45%; height: 400px; float: right; background: linear-gradient(to top right, aquamarine, aqua, azure); border-radius: 20px; margin-right: 2.5%;" id="client">
+            <center>
+                <div id="heading" style="padding-top: 7px; font-size: 30px; font-weight: 500;">
+                    Client
+                </div>
+                <div id="display_client_message">
+                    {%block content %} {% endblock %}
+                </div>
+                <div id="client_message">
+                    <label>Message: </label>
+                    <input type="text" id="client"/>
+                    <button id="client_send" style="background-color: aquamarine; border-radius: 10px;">Send</button>
+                </div>
+            </center>
+        </div>
+
+        
+    </body>
+</html>
